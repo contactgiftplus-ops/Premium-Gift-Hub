@@ -65,15 +65,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-muted-foreground">
                 <MapPin className="text-primary shrink-0 mt-1" size={18} />
-                <span className="text-sm">Tầng 15, Vincom Center, 72 Lê Thánh Tôn, Quận 1, TP. Hồ Chí Minh</span>
+                <span className="text-sm">Số 10 Duy Tân, P. Cầu Giấy, TP. Hà Nội</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
                 <Phone className="text-primary shrink-0 mt-1" size={18} />
-                <span className="text-sm">Hotline: 0909 123 456<br />CSKH: 0909 654 321</span>
+                <span className="text-sm">Hotline: 0922.354.111<br />CSKH: 0922.354.111</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
                 <Mail className="text-primary shrink-0 mt-1" size={18} />
-                <span className="text-sm">hello@giftpluspremium.vn</span>
+                <span className="text-sm">contact.giftplus@gmail.com</span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
                 <Clock className="text-primary shrink-0 mt-1" size={18} />

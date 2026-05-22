@@ -89,7 +89,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-serif text-xl text-foreground mb-1">Văn Phòng</h4>
-                    <p className="text-muted-foreground">Tầng 15, Vincom Center<br/>72 Lê Thánh Tôn, Quận 1<br/>TP. Hồ Chí Minh</p>
+                    <p className="text-muted-foreground">Số 10 Duy Tân<br/>P. Cầu Giấy, TP. Hà Nội</p>
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-serif text-xl text-foreground mb-1">Điện Thoại</h4>
-                    <p className="text-muted-foreground">Hotline: 0909 123 456<br/>CSKH: 0909 654 321</p>
+                    <p className="text-muted-foreground">Hotline: 0922.354.111<br/>CSKH: 0922.354.111</p>
                   </div>
                 </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-serif text-xl text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">hello@giftpluspremium.vn<br/>sales@giftpluspremium.vn</p>
+                    <p className="text-muted-foreground">contact.giftplus@gmail.com</p>
                   </div>
                 </div>
 
