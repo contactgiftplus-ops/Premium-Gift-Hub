@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { SiFacebook, SiZalo, SiInstagram } from "react-icons/si";
+import logoImg from "@assets/unnamed_1779465843718.jpg";
 
 export function Footer() {
   return (
@@ -11,14 +12,12 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 group inline-flex" data-testid="link-footer-logo">
-              <div className="w-12 h-12 border border-primary flex items-center justify-center rounded-sm">
-                <span className="font-serif text-primary text-2xl font-bold">G</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-primary text-2xl font-bold leading-none tracking-wide">Gift Plus</span>
-                <span className="text-primary/80 text-xs uppercase tracking-[0.2em] font-medium">Premium</span>
-              </div>
+            <Link href="/" className="inline-flex" data-testid="link-footer-logo">
+              <img
+                src={logoImg}
+                alt="Gift Plus Premium"
+                className="h-16 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Nhà cung cấp giải pháp quà tặng cao cấp hàng đầu Việt Nam. Tôn vinh đẳng cấp, gắn kết thâm giao qua từng kiệt tác quà tặng.

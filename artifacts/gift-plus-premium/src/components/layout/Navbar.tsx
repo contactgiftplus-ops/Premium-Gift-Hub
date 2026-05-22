@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logoImg from "@assets/unnamed_1779465843718.jpg";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -31,14 +32,12 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group" data-testid="link-home-logo">
-          <div className="w-10 h-10 border border-primary flex items-center justify-center rounded-sm group-hover:bg-primary/10 transition-colors">
-            <span className="font-serif text-primary text-xl font-bold">G</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-primary text-xl font-bold leading-none tracking-wide">Gift Plus</span>
-            <span className="text-primary/80 text-[10px] uppercase tracking-[0.2em] font-medium">Premium</span>
-          </div>
+        <Link href="/" className="flex items-center group" data-testid="link-home-logo">
+          <img
+            src={logoImg}
+            alt="Gift Plus Premium"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
