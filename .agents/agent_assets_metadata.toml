@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "wKL0wLv1HESyJaJSwmNKa"
+uri = "file://artifacts/gift-plus-premium/public/images/hero-bg.png"
+type = "image"
+title = "Premium corporate gift box setup"
+
+[[generated]]
+id = "cKPd1WVP8J2O-H4IaZbqY"
+uri = "file://artifacts/gift-plus-premium/public/images/corp-gift-1.png"
+type = "image"
+title = "Corporate gift hamper"
+
+[[generated]]
+id = "8ZBIUU0DVq7TA2D5bPYQw"
+uri = "file://artifacts/gift-plus-premium/public/images/personal-gift-1.png"
+type = "image"
+title = "Personalized engraved pen"
+
+[[generated]]
+id = "w2INZEOE_dngiPBpO9BnI"
+uri = "file://artifacts/gift-plus-premium/public/images/corp-gift-2.png"
+type = "image"
+title = "Luxury corporate event gift"
+
+[[generated]]
+id = "Ru4oHmHix-5r6LvdvyQ99"
+uri = "file://artifacts/gift-plus-premium/public/images/corp-gift-3.png"
+type = "image"
+title = "High-end partner gift"
+
+[[generated]]
+id = "UVxO88nC2poxfFmzXsc9t"
+uri = "file://artifacts/gift-plus-premium/public/images/personal-gift-2.png"
+type = "image"
+title = "Personalized leather wallet"
+
+[[generated]]
+id = "Pl3yXWmelRyiWlYXlMlxK"
+uri = "file://artifacts/gift-plus-premium/public/images/personal-gift-3.png"
+type = "image"
+title = "Custom anniversary gift"

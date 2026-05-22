@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Gift Plus Premium"
+version = "1.0.0"
+id = "artifacts/gift-plus-premium"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22780
+
+[services.development]
+run = "pnpm --filter @workspace/gift-plus-premium run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/gift-plus-premium", "run", "build" ]
+publicDir = "artifacts/gift-plus-premium/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22780"
+BASE_PATH = "/"
