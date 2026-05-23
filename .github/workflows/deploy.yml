@@ -42,7 +42,7 @@ jobs:
       - name: Build
         env:
           PORT: 5173
-          BASE_PATH: /
+          BASE_PATH: ./
         run: pnpm run build
 
       - name: Setup Pages
