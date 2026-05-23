@@ -1,0 +1,52 @@
+name: Deploy Review App to GitHub Pages
+
+on:
+  push:
+    branches: ["main"] # Hoặc master tùy nhánh chính của bạn
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: artifacts/gift-plus-premium # Đường dẫn đến thư mục chứa index.html của bạn
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: artifacts/gift-plus-premium/package-lock.json # Nếu không có file package-lock.json thì xóa dòng cache này đi
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'artifacts/gift-plus-premium/dist' # Thư mục sau khi build của Vite thường là dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
