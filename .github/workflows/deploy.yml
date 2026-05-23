@@ -2,7 +2,7 @@ name: Deploy Review App to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Hoặc master tùy nhánh chính của bạn
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -21,21 +21,28 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: artifacts/gift-plus-premium # Đường dẫn đến thư mục chứa index.html của bạn
+        working-directory: artifacts/gift-plus-premium
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9 # Phiên bản pnpm phù hợp cho các dự án Replit mới
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: artifacts/gift-plus-premium/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -43,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'artifacts/gift-plus-premium/dist' # Thư mục sau khi build của Vite thường là dist
+          path: 'artifacts/gift-plus-premium/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
